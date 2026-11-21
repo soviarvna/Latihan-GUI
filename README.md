@@ -2,9 +2,8 @@
 
 ## Identitas
 
-- **Nama**: isi nama kamu
-- **NIM**: isi NIM kamu
-- **Mata Kuliah**: isi mata kuliah
+- **Nama**: Sovia Rovana Fikri
+- **NIM**: F1D02510027
 
 ---
 
@@ -14,19 +13,7 @@ Aplikasi sederhana untuk menginput data buku (judul dan nama penulis) menggunaka
 
 ## Screenshot
 
-![Tampilan Aplikasi Data Buku](Srenshoot.png)
-
-## Cara Menjalankan
-
-1. Pastikan JDK sudah terpasang (minimal Java 8).
-2. Compile file:
-   ```bash
-   javac DataBuku.java
-   ```
-3. Jalankan program:
-   ```bash
-   java DataBuku
-   ```
+![Tampilan Aplikasi Data Buku](Sreenshoot.png)
 
 ## Fitur
 
@@ -36,43 +23,45 @@ Aplikasi sederhana untuk menginput data buku (judul dan nama penulis) menggunaka
 
 ## 5 Komponen Utama GUI yang Digunakan
 
-### 1. Top-Level Container: `JFrame`
+### 1. Top-Level Container: JFrame
 
-Jendela utama aplikasi. Semua komponen lain diletakkan di dalam `JFrame`. Class `DataBuku` mewarisi (`extends`) `JFrame`.
+Jendela utama aplikasi. Semua komponen lain diletakkan di dalam JFrame. Class DataBuku mewarisi (extends) JFrame.
 
-```java
-public class DataBuku extends JFrame implements ActionListener
-```
+### 2. Intermediate Container: JPanel
 
-### 2. Intermediate Container: `JPanel`
-
-Wadah perantara untuk mengelompokkan komponen di dalam `JFrame`. Ada 2 panel:
+Wadah perantara untuk mengelompokkan komponen di dalam JFrame. Ada 2 panel:
 
 | Panel | Fungsi |
 |---|---|
-| `formPanel` | Menampung label dan kolom input |
-| `buttonPanel` | Menampung tombol Simpan dan Reset |
+| formPanel | Menampung label dan kolom input |
+| buttonPanel | Menampung tombol Simpan dan Reset |
 
-### 3. Atomic Component: `JLabel`, `JTextField`, `JButton`
+### 3. Atomic Component: JLabel, JTextField, JButton
 
 Komponen dasar yang berinteraksi langsung dengan pengguna.
 
 | Class | Fungsi |
 |---|---|
-| `JLabel` | Menampilkan teks (judul header dan label kolom) |
-| `JTextField` | Kolom input judul buku dan nama penulis |
-| `JButton` | Tombol Simpan dan Reset |
+| JLabel | Menampilkan teks (judul header dan label kolom) |
+| JTextField | Kolom input judul buku dan nama penulis |
+| JButton | Tombol Simpan dan Reset |
 
-### 4. Layout Classes: `BorderLayout`, `GridLayout`, `FlowLayout`
+### 4. Layout Classes: BorderLayout, GridLayout, FlowLayout
 
 Mengatur posisi dan ukuran komponen di dalam container.
 
 | Layout | Dipakai pada | Keterangan |
 |---|---|---|
-| `BorderLayout` | `JFrame` | Header di `NORTH`, form di `CENTER`, tombol di `SOUTH` |
-| `GridLayout` | `formPanel` | Susunan grid 2 baris x 2 kolom untuk label dan input |
-| `FlowLayout` | `buttonPanel` | Tombol tersusun sejajar di tengah |
+| BorderLayout | JFrame | Header di bagian atas, form di tengah, tombol di bagian bawah |
+| GridLayout | formPanel | Susunan grid 2 baris x 2 kolom untuk label dan input |
+| FlowLayout | buttonPanel | Tombol tersusun sejajar di tengah |
 
-### 5. Event Listener: `ActionListener`
+### 5. Event Listener: ActionListener
 
-Menangani aksi klik tombol. Class `DataBuku` mengimplementasikan interface `ActionListener` dan
+Menangani aksi klik tombol. Class DataBuku mengimplementasikan interface ActionListener dan meng-override method actionPerformed(). Method ini memeriksa tombol mana yang diklik: tombol Simpan memproses dan menampilkan data, sedangkan tombol Reset mengosongkan kolom input. Listener didaftarkan ke kedua tombol menggunakan addActionListener.
+
+## Isi Repositori
+
+- DataBuku.java : kode program
+- README.md : dokumentasi ini
+- Sreenshoot.png : tampilan aplikasi

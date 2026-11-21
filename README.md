@@ -13,7 +13,7 @@ Aplikasi sederhana untuk menginput data buku (judul dan nama penulis) menggunaka
 
 ## Screenshot
 
-![Tampilan Aplikasi Data Buku](Sreenshoot.png)
+![Tampilan Aplikasi Data Buku](Screenshoot.png)
 
 ## Fitur
 
@@ -64,4 +64,4 @@ Menangani aksi klik tombol. Class DataBuku mengimplementasikan interface ActionL
 
 - DataBuku.java : kode program
 - README.md : dokumentasi ini
-- Sreenshoot.png : tampilan aplikasi
+- Screenshoot.png : tampilan aplikasi

@@ -14,7 +14,7 @@ Aplikasi sederhana untuk menginput data buku (judul dan nama penulis) menggunaka
 
 ## Screenshot
 
-![Tampilan Aplikasi Data Buku](Sreenshoot.png)
+![Tampilan Aplikasi Data Buku](Srenshoot.png)
 
 ## Cara Menjalankan
 
